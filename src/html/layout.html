@@ -1,8 +1,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../lib/unslider-master/dist/css/unslider.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/unslider-master/dist/js/unslider-min.js"></script>
+</head>
 <meta charset="utf-8">
 </head>
 <body>
@@ -17,7 +20,7 @@
       </form>
     </div>
     <div class="row">
-      <div id="chordtext" class="col-sm-6">
+      <div id="chordtext" class="col-sm-6 pre-scrollable" style="max-height: 580px;">
       </div>
       <div class="col-sm-6">
           <div class="row">
@@ -25,14 +28,26 @@
               </div>
         </div>
         <div class="row">
-              <div id="chordpics" class="col-sm-6">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <div class="col-sm-3">
+                <div id="capo">
+                </div>
               </div>
+              <div class="col-sm-6">
+                <div class="my-slider" id="chordpics">
+                </div>
+              </div>
+              <div class="col-sm-3"/>
         </div>
       </div>
     </div>
   </div>
+  <script>
+  jQuery(document).ready(function($) {
+    $('.my-slider').unslider({
+    nav: false, //hides ugly navigation bar
+    arrows: false //hides pre, next
+    });
+  });
+</script>
 </body>
 </html>
